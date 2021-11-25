@@ -1,1 +1,1 @@
-# decidr
+# Decidr App
