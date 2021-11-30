@@ -1,29 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
+import React from "react";
+//import { useState } from 'react';
 
 
 function App() {
-  const [listContainer, setListContainer] = useState([]);
+ //const [listContainer, setListContainer] = useState([]);
 
   return (
-    
-      
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>SHPONGLE</h1>
     </div>
-  );
+      
+  ); 
 }
 
 export default App;
