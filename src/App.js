@@ -5,19 +5,20 @@ import AddItem from './components/AddItem';
 import ChooseModal from './components/ChooseModal';
 import Footer from "./components/Footer";
 import './App.css';
+import DisplayList from "./components/ChooseModal";
 
 
 function App() {
   const [listContainer, setListContainer] = useState([]);
-  const [modal, setModal] = useState(false); 
-
-  const showModal = () => {
-    setModal(true);
-  }
+  
 
   
   
-  console.log('listContainer', listContainer);
+
+
+  
+  console.log('listContainer',listContainer);
+  
 
   
   return (
@@ -31,11 +32,12 @@ function App() {
           setListContainer={setListContainer} />
           
       </div></>
+    
       
       
       
     <div>
-      <ChooseModal />
+      <DisplayList />
     </div>
       <div>
         <Footer />
