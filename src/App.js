@@ -7,20 +7,18 @@ import Footer from "./components/Footer";
 import './App.css';
 
 
-
 function App() {
   const [listContainer, setListContainer] = useState([]);
+  const [modal, setModal] = useState(false); 
+
   
 
   
   
-
-
-  
-  console.log('listContainer',listContainer);
-  
+  console.log('listContainer', listContainer);
 
   
+
   return (
     <><><div className="App">
       <Header />
@@ -29,15 +27,21 @@ function App() {
       <div>
         <AddItem
           listContainer={listContainer}
-          setListContainer={setListContainer} />
+          setModal = {setModal}setListContainer={setListContainer} />
           
       </div></>
-    
-      
-      
+      {modal && (
+      <div>
+        <ChooseModal
+          listContainer={listContainer}
+          setListContainer={setListContainer}
+          onCloseClicked={()=>setModal(false)} />
+          
+      </div>
+      )}
       
     <div>
-      <ChooseModal listContainer={listContainer} />
+      
     </div>
       <div>
         <Footer />

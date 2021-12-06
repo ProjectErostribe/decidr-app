@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import ChooseModal from './ChooseModal';
 
-import Randomiser from './Randomiser';
 
 
-export default function AddItem({listContainer,setListContainer}) {
+export default function AddItem({listContainer,setListContainer, setModal}) {
     const [newItem, setNewItem] = useState('');
-    const [show, setShow] = useState(false);
+    
 
     const formSubmit = (event) => {
         event.preventDefault();
@@ -16,7 +16,9 @@ export default function AddItem({listContainer,setListContainer}) {
     }
 
     return (
-        <form>
+        <form onSubmit= {(e) => {
+            setModal(true);
+        formSubmit(e);} }>
             <div>
             <input 
                 id="add-item" 
@@ -26,9 +28,7 @@ export default function AddItem({listContainer,setListContainer}) {
             />
             <button id="submit-item" 
             
-            onClick= {() => {
-                setShow(true);
-            formSubmit();} }>Add Item
+            >Add Item
             </button>
             
             
