@@ -5,7 +5,7 @@ import AddItem from './components/AddItem';
 import ChooseModal from './components/ChooseModal';
 import Footer from "./components/Footer";
 import './App.css';
-import DisplayList from "./components/ChooseModal";
+
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
       
       
     <div>
-      <DisplayList />
+      <ChooseModal listContainer={listContainer} />
     </div>
       <div>
         <Footer />

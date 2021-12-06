@@ -25,8 +25,10 @@ export default function AddItem({listContainer,setListContainer}) {
                 placeholder="Add an item"
             />
             <button id="submit-item" 
-            onClick= {formSubmit}
-            onClick= {() => setShow(true)}>Add Item
+            
+            onClick= {() => {
+                setShow(true);
+            formSubmit();} }>Add Item
             </button>
             
             

@@ -37,7 +37,7 @@ const selectItem = () => {
 
 
   
-export default function DisplayList( listContainer ) {
+export default function DisplayList( {listContainer} ) {
 
     var displayList = listContainer.map(
       (item, index) => (
